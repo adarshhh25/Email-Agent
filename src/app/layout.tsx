@@ -11,6 +11,10 @@ export const metadata: Metadata = {
   icons: [{ rel: "icon", url: "/favicon.ico" }],
 };
 
+import {
+  ClerkProvider,
+} from '@clerk/nextjs'
+
 const geist = Geist({
   subsets: ["latin"],
   variable: "--font-geist-sans",
@@ -20,10 +24,12 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
+  <ClerkProvider>
     <html lang="en" className={`${geist.variable}`}>
       <body>
         <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
+  </ClerkProvider>
   );
 }

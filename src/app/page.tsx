@@ -1,3 +1,4 @@
+import {Button} from "@/components/ui/button";
 export default async function name() {
-  return <h1 className="text-red-800">Hello Guys</h1>
+  return <Button>Hello World</Button>
 }
