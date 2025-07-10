@@ -1,8 +1,5 @@
-import {Button} from "@/components/ui/button";
+import LinkAccountButton from "@/components/link-account-button";
+
 export default async function name() {
-  return (
-   <>
-   <Button>Hello World</Button>
-   <h1>Adarsh Jha</h1>
-   </>)
+  return <LinkAccountButton/>
 }
